@@ -5,8 +5,19 @@ body {
   font-family: 'Oxygen', sans-serif;
 }
 
-div.perro{
-	background: yellow;
-	height: 100px;
-	width: 100px;
+.area1
+{
+    border:1px solid black;
+}
+.area1 .item
+{
+    color:red;
+}
+.area2
+{
+    border:1px solid blue;
+}
+.area2 .item
+{
+    color:blue;
 }

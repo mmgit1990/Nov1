@@ -1,0 +1,12 @@
+body {
+  font-size: 16px;
+  color: #fff;
+  background-color: #61122f;
+  font-family: 'Oxygen', sans-serif;
+}
+
+div.perro{
+	background: yellow;
+	height: 100px;
+	width: 100px;
+}

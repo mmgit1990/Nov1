@@ -1,26 +1,20 @@
-$(function(){
+$(document).ready(function() {
 
-     $('a[href*=#]').click(function() {
+    //When page loads...
+    $(".tab_content").hide(); //Hide all content
+    $("ul.tabs li:first").addClass("active").show(); //Activate first tab
+    $(".tab_content:first").show(); //Show first tab content
 
-     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-         && location.hostname == this.hostname) {
+    //On Click Event
+    $("ul.tabs li").click(function() {
 
-             var $target = $(this.hash);
+        $("ul.tabs li").removeClass("active"); //Remove any "active" class
+        $(this).addClass("active"); //Add "active" class to selected tab
+        $(".tab_content").hide(); //Hide all tab content
 
-             $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
-
-             if ($target.length) {
-
-                 var targetOffset = $target.offset().top;
-
-                 $('html,body').animate({scrollTop: targetOffset}, 1000);
-
-                 return false;
-
-            }
-
-       }
-
-   });
-
+        var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to
+                identify the active tab + content
+        $(activeTab).fadeIn(); //Fade in the active ID content
+        return false;
+    });
 });
